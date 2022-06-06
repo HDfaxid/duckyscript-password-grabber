@@ -1,6 +1,6 @@
 # duckyscript-password-grabber
 
-my first ducky script. Requires TwinDucky firmware to be installed on the rubber ducky. free to use and modificate.
+my first ducky script. Requires TwinDucky firmware to be installed on the rubber ducky. free to use, modificate, share. (please do not sell)
 
 first:> make sure that you have twinducky installed on your device.
 
